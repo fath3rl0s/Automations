@@ -1,17 +1,17 @@
 #!/bin/bash
 # CARLOS ENAMORADO #
 
-: {
+
 #########
-  _____
- /     \
-| () () |
- \  ^  /
-  |||||
-  |||||
-  
+#  _____
+# /     \
+#| () () |
+# \  ^  /
+#  |||||
+#  |||||
+#
 #########
-}
+
 
 # Set variables
 REPO_DIR="~/Documents/Obsidian Vault"
