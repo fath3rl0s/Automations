@@ -4,6 +4,26 @@
 # 2023-2024
 # WIP
 
+# Dependencies:
+# sudo apt-get install mailutils
+# sudo apt-get install msmtp
+
+
+# Google announced on May 15, 2024 that they would be turning off access to less secure apps starting on June 15, 2024, 
+# and fully retiring the option on September 30, 2024. 
+# To continue using these types of apps with your Google accounts, 
+# you must switch to a more secure type of access called OAuth 2.0
+
+
+
+# Download Python OAuth 
+# sudo apt-get install python3-pip
+# pip3 install --upgrade google-auth-oauthlib google-auth-httplib2
+
+
+# CREATE GOOGLE OAUTH ACCOUNT and Credentials
+# https://support.google.com/cloud/answer/6158849?hl=en
+
 
 
 # Set variables for scan
