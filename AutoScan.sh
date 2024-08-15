@@ -67,16 +67,13 @@ run_openvas_scan() {
   echo "OpenVAS scan completed. Report saved to $OPENVAS_REPORT"
 }
 
+
 # Function to send email notification
 send_email_notification() {
-  TO="security_team@example.com"
-  SUBJECT="Automated Vulnerability Scan Report"
-  BODY="The automated vulnerability scan has been completed. Please find the attached reports."
-  ATTACHMENTS="$SCAN_REPORT $OPENVAS_REPORT"
-
-  echo "$BODY" | mail -s "$SUBJECT" -a $ATTACHMENTS $TO
-  echo "Email notification sent to $TO"
+  echo "Sending email notification..."
+  python3 /home/f4th3rl0s/Vuln_Reporter/vuln_report.py
 }
+
 
 # Run the scans
 run_nmap_scan
