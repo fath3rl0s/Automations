@@ -4,9 +4,6 @@
 # 2023-2024
 # WIP
 
-# Dependencies:
-# sudo apt-get install mailutils
-# sudo apt-get install msmtp
 
 
 # Google announced on May 15, 2024 that they would be turning off access to less secure apps starting on June 15, 2024, 
@@ -24,15 +21,18 @@
 # CREATE GOOGLE OAUTH ACCOUNT and Credentials
 # https://support.google.com/cloud/answer/6158849?hl=en
 
+# This helped a bunch
+# https://mailtrap.io/blog/send-emails-with-gmail-api/
+
 
 
 # Set variables for scan
-TARGETS="192.168.1.0/24"  # Network range to scan
-SCAN_REPORT="/var/reports/scan_report_$(date +'%Y%m%d%H%M%S').txt"
-OPENVAS_REPORT="/var/reports/openvas_report_$(date +'%Y%m%d%H%M%S').xml"
+TARGETS="192.168.1.1"  # Network range to scan
+SCAN_REPORT="/tmp/nmap_$(date +'%m-%d-%Y-%H:%M:%S').txt"
+OPENVAS_REPORT="/var/reports/openvas_report_$(date +'%m-%d-%Y-%H:%M:%S').xml"
 
 # Ensure the reports directory exists
-mkdir -p /var/reports
+# mkdir -p /var/reports
 
 # Function to run Nmap scan
 run_nmap_scan() {
@@ -71,13 +71,13 @@ run_openvas_scan() {
 # Function to send email notification
 send_email_notification() {
   echo "Sending email notification..."
-  python3 /home/f4th3rl0s/Vuln_Reporter/vuln_report.py
+  python3 /home/f4th3rl0s/Vuln_Reporter/vulnEmail.py
 }
 
 
 # Run the scans
 run_nmap_scan
-run_openvas_scan
+# run_openvas_scan
 
 # Send email notification
 send_email_notification
