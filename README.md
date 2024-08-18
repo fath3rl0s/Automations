@@ -1,6 +1,9 @@
 # Automations
 
 
+<img width="918" alt="image" src="https://github.com/user-attachments/assets/b69d5b67-c504-4e04-92d9-0693b015f15d">
+
+
 MORE BASH (and some python)!!!!
 
 
@@ -28,7 +31,3 @@ GOOGLE CLOUD PROJECT - Google GMAIL allowed in Project Scope, OAUTH 2.0 Credenti
 BASH
 PYTHON3
 
-
-
-
-Carlos Enamorado
