@@ -18,10 +18,11 @@ Current Execution:
 - Sends an email notification with the scan reports.
 
 Prerequisites:
-NMAP
-OPENVAS
-NESSUS
-GOOGLE CLOUD PROJECT - Google GMAIL allowed in Project Scope, OAUTH 2.0 Credentials
-BASH
-PYTHON3
-
+- NMAP
+- OPENVAS
+- NESSUS
+- GOOGLE CLOUD PROJECT - GMAIL APP allowed in Project Scope, OAUTH 2.0 Credentials
+- BASH
+- PYTHON3
+- pip3 install --upgrade google-auth-oauthlib google-auth-httplib2
+- pip3 install google-api-python-client
