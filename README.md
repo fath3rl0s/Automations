@@ -1,5 +1,5 @@
 # Automations
-Carlos Enamorado
+
 
 MORE BASH (and some python)!!!!
 
@@ -27,3 +27,6 @@ NESSUS
 GOOGLE CLOUD PROJECT - Google GMAIL allowed in Project Scope, OAUTH 2.0 Credentials
 BASH
 PYTHON3
+
+
+- Carlos Enamorado
