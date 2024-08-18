@@ -1,5 +1,5 @@
 # Automations
-# Carlos Enamorado
+Carlos Enamorado
 
 MORE BASH (and some python)!!!!
 
