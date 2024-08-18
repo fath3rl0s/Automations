@@ -28,8 +28,8 @@ GOOGLE CLOUD PROJECT - Google GMAIL allowed in Project Scope, OAUTH 2.0 Credenti
 BASH
 PYTHON3
 
-
-
-
-
+|
+|
+|
+|
 Carlos Enamorado
