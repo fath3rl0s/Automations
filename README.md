@@ -11,13 +11,12 @@ Emails each report to GMAIL using OAUTH 2.0 straight from Linux
 
 
 
-Current Execution:
-🚧 
+🚧 Current Execution:
 - Runs and creates Nmap scan results.
 - Calls Nessus API to build a report against machine
 - Sends an email notification with the scan reports.
 
-Prerequisites:
+🛠️ Prerequisites:
 - NMAP
 - OPENVAS
 - NESSUS
