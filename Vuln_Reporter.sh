@@ -50,15 +50,29 @@ echo
 
 
 
+
+
 # Set variables for scan
-TARGETS="192.168.1.1/24"  # Network range to scan
+TARGETS=$(ip a | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}/[0-9]{1,3}\b" | head -2 | tail -1)  # Network range to scan
 SCAN_REPORT="/tmp/nmap_$(date +'%m-%d-%Y-%H:%M:%S').txt"
 
 # Function to run Nmap scan
 run_nmap_scan() {
-  echo -e "$YL[-] Running Nmap Scan: $CC"
+  
+  echo
+  printf $RD"NMAP"$CC
+  echo
+  echo -e "$YL[-] Running Nmap Scan on network: $TARGETS using:$CC"
   echo -e "$YL[-] nmap -sCV --script vulners -T4 -v$CC"
-  nmap -sCV --script vulners -T4 -v $TARGETS > $SCAN_REPORT 2>&1
+  
+  nmap -sCV --script vulners -T4 -v $TARGETS > $SCAN_REPORT 2>&1 &
+  nmap_pid=$!
+
+  while kill -0 "$nmap_pid" >/dev/null 2>&1;do
+          printf $RD'[*]'$CC
+          sleep 1
+  done
+  echo
   echo -e "$GR[+] Nmap scan completed. Report saved to $MG$SCAN_REPORT$CC"
 }
 
@@ -97,6 +111,8 @@ download_report() {
     if [ "$status" == "ready" ]; then
       break
     fi
+    echo
+    printf $RD"TENABLE NESSUS"$CC
     echo
     echo -e "$YL[-] Pulling the Nessus Report as a PDF$CC"
     sleep 10
