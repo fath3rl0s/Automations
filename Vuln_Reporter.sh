@@ -1,8 +1,25 @@
 #!/bin/bash
 #
 # CARLOS ENAMORADO
-# 2023-2024
+#
 # WIP
+
+# Google announced on May 15, 2024 that they would be turning off access to less secure apps starting on June 15, 2024, 
+# and fully retiring the option on September 30, 2024. 
+# To continue using these types of apps with your Google accounts, you must switch to a more secure type of access called OAuth 2.0
+
+# DOWNLOAD PYTHON OAUTH
+# apt-get install python3-pip
+# pip3 install --upgrade google-auth-oauthlib google-auth-httplib2
+# pip3 install google-api-python-client
+
+# CREATE GOOGLE OAUTH ACCOUNT and Credentials
+# https://support.google.com/cloud/answer/6158849?hl=en
+
+# DOCUMENTATION
+# https://mailtrap.io/blog/send-emails-with-gmail-api/
+
+
 
 # Load Secret Variables
 # .env:
@@ -47,7 +64,6 @@ carlos enamorado
 https://www.linkedin.com/in/carlos-analyst/
 EOF
 echo
-
 
 
 
@@ -140,7 +156,7 @@ fi
 send_email_notification() {
   echo
   echo -e "$YL[+] Sending email notification...$CC"
-  python3 /home/f4th3rl0s/Vuln_Reporter/vulnEmail.py
+  python3 /path/to/vulnEmail.py # ADJUST THIS
 }
 
 
