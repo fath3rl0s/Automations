@@ -95,7 +95,7 @@ run_nmap_scan() {
 
 # Nessus API details
 NESSUS_HOST="https://localhost:8834"
-SCAN_ID="9"  # Replace with your scan ID
+SCAN_ID="9"  # REPLACE WITH YOUR SCAN ID
 
 # Function to authenticate and get a session token
 get_token() {
