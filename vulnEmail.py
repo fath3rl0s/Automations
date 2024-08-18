@@ -60,6 +60,7 @@ def main():
     # Use glob to find files matching the pattern
     nmap_files = glob.glob('/tmp/nmap*.txt') #ADJUST AS NEEDED
     openvas_report = '/tmp/openvas.txt'  # ADJUST AS NEEDED
+    nessus_report = '/tmp/nessus_report.pdf' # ADJUST AS NEEDED
 
     # Combine all attachments
     attachments = nmap_files + [openvas_report]
