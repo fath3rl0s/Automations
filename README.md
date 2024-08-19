@@ -27,6 +27,6 @@ Emails each report to GMAIL using OAUTH 2.0 straight from Linux
 - pip3 install google-api-python-client
 
 🪜 Steps
-1. Download oauth.py, vulnEmail.py, and Vuln_Reporter.py
+1. Download oauth.py, vulnEmail.py, and Vuln_Reporter.sh
 2. Run oauth.py to generate a valid Google Token (Your browser should launch and prompt for authentication) to be used by vulnEmail.py
 3. Run Vuln_Reporter.sh (requires vulnEmail.py to send email)
